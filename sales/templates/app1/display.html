@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Sales</th>
+        </tr>
+        {% for year,sales in sales_data.items %}
+
+        <tr>
+            <td>{{ year }}</td>
+            <td>{{ sales }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
