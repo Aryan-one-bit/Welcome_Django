@@ -1,0 +1,26 @@
+
+{% block content %}
+<div class="container mt-4">
+  <h2 class="fw-bold mb-3">Step 1: Personal Information</h2>
+
+  <form id="step1-form" data-step="1" class="p-3 border rounded-3 shadow-sm bg-light">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-label">Full Name</label>
+      <input type="text" name="name" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Age</label>
+      <input type="number" name="age" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" name="email" class="form-control" required>
+    </div>
+
+    <button type="button" onclick="saveStep(1, 2)" class="btn btn-primary w-100">Next</button>
+  </form>
+</div>
+{% endblock %}

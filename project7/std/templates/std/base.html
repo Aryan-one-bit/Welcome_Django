@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Multi-Step Registration</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{% static 'scripts.js' %}"></script>
+
+  <style>
+    body { background:#f5f6fa; font-family: Arial, sans-serif; }
+    .page-wrapper { max-width:700px; margin:40px auto; }
+    .progress { height:20px; border-radius:10px; overflow:hidden; background:#ddd; margin-bottom:20px; }
+    .progress-bar { height:100%; width:0%; background:#007bff; transition: width .4s ease-in-out; color:#fff; text-align:center; line-height:20px; font-weight:600; }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="progress">
+      <div id="progressBar" class="progress-bar">Step <span id="progressStep">1</span>/4</div>
+    </div>
+
+    <div id="stepContent">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+</body>
+</html>
