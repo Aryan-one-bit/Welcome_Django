@@ -1,0 +1,12 @@
+<h2>Manual Login</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter username"><br><br>
+    <input type="password" name="password" placeholder="Enter password"><br><br>
+    <button type="submit">Login</button>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</form>
