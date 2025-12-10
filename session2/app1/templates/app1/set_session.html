@@ -1,0 +1,20 @@
+<h2>Create Session</h2>
+
+<form method="POST" action="{% url 'set_session' %}">
+    {% csrf_token %}
+    Name: <input type="text" name="name" required><br><br>
+    City: <input type="text" name="city" required><br><br>
+
+    <button type="submit">Create Session</button>
+</form>
+
+{% if message %}
+    <p style="color:red;">{{ message }}</p>
+{% endif %}
+
+
+{% if message2 %}
+    <p style="color:red;">{{ message2 }}</p>
+{% endif %}
+
+
