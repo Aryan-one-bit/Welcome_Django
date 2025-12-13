@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countries</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- DataTables -->
+    <link rel="stylesheet"
+          href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'scripts.js' %}"></script>
+</head>
+
+<body>
+    <h2>Country List</h2>
+
+    <!-- Structure by DTL -->
+    <table id="carTable" class="display">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Car Name</th>
+                <th>Car Colour</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- EMPTY ON PURPOSE -->
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+$(document).ready(function(){
+    $('#carTable').DataTable({
+        ajax:{
+            url:'/api/cars',
+            type:"GET",
+        },
+        columns:[
+            {data:"id"},
+            {data:"name"},
+            {data:"colour"}
+        ]
+    });
+});
